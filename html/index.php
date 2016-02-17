@@ -21,9 +21,9 @@ $maincat = filter_var($_REQUEST['category'], FILTER_SANITIZE_STRING, FILTER_FLAG
                 case "":
                     foreach ($Menu as $value) {
                         echo "<a href='" . $value['Link'] . "'>
-                <img class='img-responsive' src='" . $value['ImageLoc'] . "' alt=''>
-                <h3>" . $value['Title'] . "</h3>
-            </a>";
+                        <img class='img-responsive' src='" . $value['ImageLoc'] . "' alt=''>
+                        <h3>" . $value['Title'] . "</h3>
+                        </a>";
                     }
                     break;
                 case "twofor":
@@ -31,9 +31,9 @@ $maincat = filter_var($_REQUEST['category'], FILTER_SANITIZE_STRING, FILTER_FLAG
                     $twofor = $Menu[0];
                     foreach (array_slice($twofor, 3) as $value) {
                         echo "<a href='" . $value['Link'] . "'>
-                <img class='img-responsive' src='" . $value['ImageLoc'] . "' alt=''>
-                <h3>" . $value['Title'] . "</h3>
-            </a>";
+                        <img class='img-responsive' src='" . $value['ImageLoc'] . "' alt=''>
+                        <h3>" . $value['Title'] . "</h3>
+                        </a>";
                     }
                     break;
                 case "better":
@@ -41,9 +41,9 @@ $maincat = filter_var($_REQUEST['category'], FILTER_SANITIZE_STRING, FILTER_FLAG
                     $better = $Menu[1];
                     foreach (array_slice($better, 3) as $value) {
                         echo "<a href='" . $value['Link'] . "'>
-                <img class='img-responsive' src='" . $value['ImageLoc'] . "' alt=''>
-                <h3>" . $value['Title'] . "</h3>
-            </a>";
+                        <img class='img-responsive' src='" . $value['ImageLoc'] . "' alt=''>
+                        <h3>" . $value['Title'] . "</h3>
+                        </a>";
                     }
                     break;
             case "Drinks":
@@ -51,9 +51,9 @@ $maincat = filter_var($_REQUEST['category'], FILTER_SANITIZE_STRING, FILTER_FLAG
                     $Drinks = $Menu[2];
                     foreach (array_slice($Drinks,3) as $value) {
                         echo "<a href='".$value['Link']."'>
-                <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
-                <h3>".$value['Title']."</h3>
-            </a>";
+                        <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
+                        <h3>".$value['Title']."</h3>
+                        </a>";
                     }
                     break;
                 case "Burgers":
@@ -61,9 +61,9 @@ $maincat = filter_var($_REQUEST['category'], FILTER_SANITIZE_STRING, FILTER_FLAG
                     $Burgers = $Menu[3];
                     foreach (array_slice($Burgers,3) as $value) {
                         echo "<a href='".$value['Link']."'>
-                <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
-                <h3>".$value['Title']."</h3>
-            </a>";
+                        <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
+                        <h3>".$value['Title']."</h3>
+                        </a>";
                     }
                     break;
                 case "Desserts":
@@ -71,9 +71,9 @@ $maincat = filter_var($_REQUEST['category'], FILTER_SANITIZE_STRING, FILTER_FLAG
                     $Desserts = $Menu[4];
                     foreach (array_slice($Desserts,3) as $value) {
                         echo "<a href='".$value['Link']."'>
-                <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
-                <h3>".$value['Title']."</h3>
-            </a>";
+                        <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
+                        <h3>".$value['Title']."</h3>
+                        </a>";
                     }
                     break;
                 case "MainEntree":
@@ -81,9 +81,9 @@ $maincat = filter_var($_REQUEST['category'], FILTER_SANITIZE_STRING, FILTER_FLAG
                     $MainEntree = $Menu[5];
                     foreach (array_slice($MainEntree,3) as $value) {
                         echo "<a href='".$value['Link']."'>
-                <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
-                <h3>".$value['Title']."</h3>
-            </a>";
+                        <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
+                        <h3>".$value['Title']."</h3>
+                        </a>";
                     }
                     break;
                 case "Lunch":
@@ -91,9 +91,9 @@ $maincat = filter_var($_REQUEST['category'], FILTER_SANITIZE_STRING, FILTER_FLAG
                     $Lunch = $Menu[6];
                     foreach (array_slice($Lunch,3) as $value) {
                         echo "<a href='".$value['Link']."'>
-                <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
-                <h3>".$value['Title']."</h3>
-            </a>";
+                        <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
+                        <h3>".$value['Title']."</h3>
+                        </a>";
                     }
                     break;
                 case "Salads":
@@ -101,9 +101,9 @@ $maincat = filter_var($_REQUEST['category'], FILTER_SANITIZE_STRING, FILTER_FLAG
                     $Salads = $Menu[7];
                     foreach (array_slice($Salads,3) as $value) {
                         echo "<a href='".$value['Link']."'>
-                <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
-                <h3>".$value['Title']."</h3>
-            </a>";
+                        <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
+                        <h3>".$value['Title']."</h3>
+                        </a>";
                     }
                     break;
                 case "Pub":
@@ -111,9 +111,9 @@ $maincat = filter_var($_REQUEST['category'], FILTER_SANITIZE_STRING, FILTER_FLAG
                     $Pub = $Menu[8];
                     foreach (array_slice($Pub,3) as $value) {
                         echo "<a href='".$value['Link']."'>
-                <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
-                <h3>".$value['Title']."</h3>
-            </a>";
+                        <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
+                        <h3>".$value['Title']."</h3>
+                        </a>";
                     }
                     break;
                 case "Handhelds":
@@ -121,9 +121,9 @@ $maincat = filter_var($_REQUEST['category'], FILTER_SANITIZE_STRING, FILTER_FLAG
                     $Handhelds = $Menu[9];
                     foreach (array_slice($Handhelds,3) as $value) {
                         echo "<a href='".$value['Link']."'>
-                <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
-                <h3>".$value['Title']."</h3>
-            </a>";
+                        <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
+                        <h3>".$value['Title']."</h3>
+                        </a>";
                     }
                     break;
                 case "kids":
@@ -131,9 +131,9 @@ $maincat = filter_var($_REQUEST['category'], FILTER_SANITIZE_STRING, FILTER_FLAG
                     $kids = $Menu[10];
                     foreach (array_slice($kids,3) as $value) {
                         echo "<a href='".$value['Link']."'>
-                <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
-                <h3>".$value['Title']."</h3>
-            </a>";
+                        <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
+                        <h3>".$value['Title']."</h3>
+                        </a>";
                     }
                     break;
                 case "Bar":
@@ -141,9 +141,9 @@ $maincat = filter_var($_REQUEST['category'], FILTER_SANITIZE_STRING, FILTER_FLAG
                     $Bar = $Menu[11];
                     foreach (array_slice($Bar,3) as $value) {
                         echo "<a href='".$value['Link']."'>
-                <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
-                <h3>".$value['Title']."</h3>
-            </a>";
+                        <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
+                        <h3>".$value['Title']."</h3>
+                        </a>";
                     }
                     break;
             }
