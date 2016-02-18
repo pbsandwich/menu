@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 include('array.php');
-$maincat = filter_var($_REQUEST['category'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+$maincat = filter_var($_REQUEST['cat'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 ?>
 <html lang="en">
 <head>
@@ -12,143 +12,105 @@ $maincat = filter_var($_REQUEST['category'], FILTER_SANITIZE_STRING, FILTER_FLAG
     <script href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-<h1>AppleBee's Menu</h1>
+<h1><a href="/">AppleBee's Menu</a></h1><button onclick='history.go(-1);'>Back </button>
 <div class='container'>
     <div class='row'>
-        <div class='col-md-4 portfolio-item'>
-            <?php
-            switch ($maincat) {
-                case "":
-                    foreach ($Menu as $value) {
-                        echo "<a href='" . $value['Link'] . "'>
-                        <img class='img-responsive' src='" . $value['ImageLoc'] . "' alt=''>
-                        <h3>" . $value['Title'] . "</h3>
-                        </a>";
-                    }
-                    break;
-                case "twofor":
-                    echo "<h2>Two For Twenty</h2>";
-                    $twofor = $Menu[0];
-                    foreach (array_slice($twofor, 3) as $value) {
-                        echo "<a href='" . $value['Link'] . "'>
-                        <img class='img-responsive' src='" . $value['ImageLoc'] . "' alt=''>
-                        <h3>" . $value['Title'] . "</h3>
-                        </a>";
-                    }
-                    break;
-                case "better":
-                    echo "<h2>Better For You</h2>";
-                    $better = $Menu[1];
-                    foreach (array_slice($better, 3) as $value) {
-                        echo "<a href='" . $value['Link'] . "'>
-                        <img class='img-responsive' src='" . $value['ImageLoc'] . "' alt=''>
-                        <h3>" . $value['Title'] . "</h3>
-                        </a>";
-                    }
-                    break;
-            case "Drinks":
-                    echo "<h2>Beverages</h2>";
-                    $Drinks = $Menu[2];
-                    foreach (array_slice($Drinks,3) as $value) {
-                        echo "<a href='".$value['Link']."'>
-                        <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
-                        <h3>".$value['Title']."</h3>
-                        </a>";
-                    }
-                    break;
-                case "Burgers":
-                    echo "<h2>Burgers</h2>";
-                    $Burgers = $Menu[3];
-                    foreach (array_slice($Burgers,3) as $value) {
-                        echo "<a href='".$value['Link']."'>
-                        <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
-                        <h3>".$value['Title']."</h3>
-                        </a>";
-                    }
-                    break;
-                case "Desserts":
-                    echo "<h2>Desserts</h2>";
-                    $Desserts = $Menu[4];
-                    foreach (array_slice($Desserts,3) as $value) {
-                        echo "<a href='".$value['Link']."'>
-                        <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
-                        <h3>".$value['Title']."</h3>
-                        </a>";
-                    }
-                    break;
-                case "MainEntree":
-                    echo "<h2>Main Entree</h2>";
-                    $MainEntree = $Menu[5];
-                    foreach (array_slice($MainEntree,3) as $value) {
-                        echo "<a href='".$value['Link']."'>
-                        <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
-                        <h3>".$value['Title']."</h3>
-                        </a>";
-                    }
-                    break;
-                case "Lunch":
-                    echo "<h2>Lunch Combos</h2>";
-                    $Lunch = $Menu[6];
-                    foreach (array_slice($Lunch,3) as $value) {
-                        echo "<a href='".$value['Link']."'>
-                        <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
-                        <h3>".$value['Title']."</h3>
-                        </a>";
-                    }
-                    break;
-                case "Salads":
-                    echo "<h2>Salads</h2>";
-                    $Salads = $Menu[7];
-                    foreach (array_slice($Salads,3) as $value) {
-                        echo "<a href='".$value['Link']."'>
-                        <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
-                        <h3>".$value['Title']."</h3>
-                        </a>";
-                    }
-                    break;
-                case "Pub":
-                    echo "<h2>Pub Diet</h2>";
-                    $Pub = $Menu[8];
-                    foreach (array_slice($Pub,3) as $value) {
-                        echo "<a href='".$value['Link']."'>
-                        <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
-                        <h3>".$value['Title']."</h3>
-                        </a>";
-                    }
-                    break;
-                case "Handhelds":
-                    echo "<h2>Handhelds</h2>";
-                    $Handhelds = $Menu[9];
-                    foreach (array_slice($Handhelds,3) as $value) {
-                        echo "<a href='".$value['Link']."'>
-                        <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
-                        <h3>".$value['Title']."</h3>
-                        </a>";
-                    }
-                    break;
-                case "kids":
-                    echo "<h2>Kids</h2>";
-                    $kids = $Menu[10];
-                    foreach (array_slice($kids,3) as $value) {
-                        echo "<a href='".$value['Link']."'>
-                        <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
-                        <h3>".$value['Title']."</h3>
-                        </a>";
-                    }
-                    break;
-                case "Bar":
-                    echo "<h2>Bar Snacks</h2>";
-                    $Bar = $Menu[11];
-                    foreach (array_slice($Bar,3) as $value) {
-                        echo "<a href='".$value['Link']."'>
-                        <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
-                        <h3>".$value['Title']."</h3>
-                        </a>";
-                    }
-                    break;
-            }
-            ?>
-        </div>
+
+        <?php
+        switch ($maincat){
+            case "":
+                foreach($Menu as $value) {
+                    echo "<div class='col-sm-4'>
+                    <a href='".$value['Link']."'>
+                    <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
+                    <h3>".$value['Title']."</h3>
+                    </a>
+                </div>";
+                }
+                break;
+            case "twofor":
+                $subcat = $Menu[0];
+                break;
+            case "twofor1":
+                $subcat = $Menu[0][0];
+                break;
+            case "twofor2":
+                $subcat = $Menu[0][1];
+                break;
+            case "better":
+                $subcat = $Menu[1];
+                break;
+            case "lunch":
+                $subcat = $Menu[2];
+                break;
+            case "main_1":
+                $subcat = $Menu[3];
+                break;
+            case "main1":
+                $subcat = $Menu[3][0];
+                break;
+            case "main2":
+                $subcat = $Menu[3][1];
+                break;
+            case "main3":
+                $subcat = $Menu[3][2];
+                break;
+            case "main4":
+                $subcat = $Menu[3][3];
+                break;
+            case "main5":
+                $subcat = $Menu[3][4];
+                break;
+            case"snacks":
+                $subcat = $Menu[4];
+                break;
+            case "burgers":
+                $subcat = $Menu[5];
+                break;
+            case "burgers1":
+                $subcat = $Menu[5][0];
+                break;
+            case "burgers2":
+                $subcat = $Menu[5][1];
+                break;
+            case "handhelds":
+                $subcat = $Menu[6];
+                break;
+            case "salads":
+                $subcat = $Menu[7];
+                break;
+            case "pub":
+                $subcat = $Menu[8];
+                break;
+            case "kids":
+                $subcat = $Menu[9];
+                break;
+            case "desserts":
+                $subcat = $Menu[10];
+                break;
+            case "drinks":
+                $subcat = $Menu[11];
+                break;
+            case "drinks1":
+                $subcat = $Menu[11][0];
+                break;
+            case "drinks2":
+                $subcat = $Menu[11][1];
+                break;
+            case "drinks3":
+                $subcat = $Menu[11][2];
+                break;
+        }
+        echo "<h2>".$subcat['Title']."</h2>";
+        foreach (array_slice($subcat,3) as $value) {
+            echo "<div class='col-sm-4'>
+            <a href='".$value['Link']."'>
+            <img class='img-responsive' src='".$value['ImageLoc']."' alt=''>
+            <h3>".$value['Title']."</h3>
+            </a>
+        </div>";
+        }
+        ?>
     </div>
 </div>
 </body>
